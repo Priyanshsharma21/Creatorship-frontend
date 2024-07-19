@@ -1,0 +1,352 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Jomolhari&display=swap&family=Cinzel:wght@400..900&display=swap&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar{
+  display: none;
+}
+
+/* prelaoder */
+.preloader-introduction {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  z-index: 99;
+  background-color: #1ABC9C;
+}
+.preloader-introduction svg {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: calc(100% + 300px);
+}
+.preloader-introduction svg path {
+  fill: #1ABC9C;
+}
+.preloader-introduction p {
+  display: flex;
+  color: rgb(0, 0, 0);
+  align-items: center;
+  position: absolute;
+  z-index: 1;
+}
+.preloader-text-loading{
+  font-family: "Jomolhari", serif;
+  font-size: 4vw;
+}
+
+
+/* Landing */
+.h-main-text{
+  font-family: "Archivo Black", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-display: auto;
+  position: relative;
+  left: 50%;
+  transform: translate(-50%);
+  padding-top: 175px;
+  text-align: center;
+  font-size: 7.5vw;
+  line-height: .8em;
+  cursor: default;
+  color: #E2E2E2;
+}
+.h-main-text-slider{
+z-index: 1;
+position: relative;
+pointer-events: none;
+}
+.h-showreel-container{
+  position: relative;
+  display: block;
+  width: 100%;
+  margin-top: -8vw;
+  margin-bottom: 7vw;
+  height: 56.25vw;
+}
+
+.h-showreel-box{
+  position: relative;
+  display: block;
+  width: 66.66667vw;
+  height: auto;
+  left: 16.66667vw;
+}
+.h-showreel-scaler{
+  display: inline-block;
+  position: relative;
+}
+.h-showreel-slider{
+   display: inline-block;
+    position: relative;
+}
+
+.l-logo{
+  width: 150px;
+}
+
+.l-btns{
+  color: #161616;
+  padding: 0.5rem 1rem;
+  border-radius: 0.6rem;
+  cursor: pointer;
+  transition: all 0.1s linear;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 600;
+}
+
+.l-btns:hover{
+  transform: scale(1.09);
+}
+.l-btns:active{
+  transform: scale(1);
+}
+
+
+.l-login{
+  background-color: #00ff00;
+}
+
+.l-signup{
+  background-color: #d9ff00;
+}
+
+.form {
+  background-color: #000000;
+  border: 1px solid #E2E2E2;
+  display: block;
+  padding: 1rem;
+  max-width: 350px;
+  border-radius: 0.5rem;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+.form-title {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  font-weight: 600;
+  text-align: center;
+  color: #e2e2e2;
+  margin-bottom: 1rem;
+}
+
+.input-container {
+  position: relative;
+}
+
+.input-container input, .form button {
+  outline: none;
+  border: 1px solid #e5e7eb;
+  margin: 8px 0;
+}
+
+.input-container input {
+  background-color: #fff;
+  padding: 1rem;
+  padding-right: 3rem;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  width: 300px;
+  border-radius: 0.5rem;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+}
+
+.input-container span {
+  display: grid;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  place-content: center;
+}
+
+.input-container span svg {
+  color: #9CA3AF;
+  width: 1rem;
+  height: 1rem;
+}
+
+.submit {
+  display: block;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+  background-color: #00ff00;
+  color: #161616;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  font-weight: 500;
+  width: 100%;
+  border-radius: 0.5rem;
+  text-transform: uppercase;
+}
+
+.signup-link {
+  color: #6B7280;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  text-align: center;
+}
+
+.signup-link a {
+  text-decoration: underline;
+}
+
+.b-box{
+  border: 2px solid #e2e2e2;
+  border-radius: 10rem;
+  padding: 1rem;
+  margin-top: 0.5rem;
+  margin-left: 0.5rem;
+}
+
+
+.b-heading{
+  font-family: "Archivo Black", sans-serif;
+  font-size: 3vw;
+}
+
+.s-box{
+  border: 1px solid #e2e2e2;
+  border-radius: 1rem;
+  width: 300px;
+  height: 150px;
+  transition: all 0.2s linear;
+}
+
+.s-box:hover{
+  transform: scale(1.08);
+  border: 1px solid #ffae00;
+}
+.s-box:active{
+  transform: scale(1);
+  border: 1px solid #00ff00;
+}
+
+.b-text{
+  font-size: 1rem;
+  color: #e2e2e2;
+  font-weight: 400;
+  font-family: "Archivo Black", sans-serif;
+}
+
+.home-main-box{
+  padding-top: 5rem;
+}
+
+.h-box-1{
+  cursor: pointer;
+}
+
+.home-cards{
+}
+
+.b-box{
+  
+}
+
+@media (max-width: 1367px) {
+  .b-heading{
+    font-family: "Archivo Black", sans-serif;
+    font-size: 2rem;
+  }
+  
+  .s-box{
+    border: 1px solid #e2e2e2;
+    border-radius: 1rem;
+    width: 300px;
+    height: 150px;
+    transition: all 0.2s linear;
+  }
+ }
+@media (max-width: 1024px) { 
+  .h-showreel-slider{
+    transform: matrix(1, 0, 0, 1, 0, 0) !important;
+  }
+}
+@media (max-width: 991.98px) { }
+@media (max-width: 767.98px) {
+  .h-main-text{
+    font-size: 50px;
+  }
+  .l-logo{
+    width: 70px;
+    height: 30px;
+  }
+
+  .l-btns{
+    color: #161616;
+    padding: 0.2rem 0.7rem;
+    border-radius: 0.2rem;
+    cursor: pointer;
+    transition: all 0.1s linear;
+    font-size: 10px;
+  }
+
+  .s-boxes{
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .b-heading{
+    font-family: "Archivo Black", sans-serif;
+    font-size: 1.5rem;
+  }
+  
+  .s-box{
+    width: 300px;
+    height: 150px;
+    margin-top: 1rem;
+  }
+  .s-box-2{
+    margin-left: 0px;
+    margin-top: 2rem;
+  }
+
+  .signup{
+    margin-top: 5.5rem;
+  }
+ }
+
+@media (max-width: 575.98px) { 
+  .preloader-text-loading{
+    font-size: 9vw;
+  }
+
+  .preloader-text-path{
+    top: -6px;
+    left: 0px;
+    text-align: left;
+  }
+
+  .preloader-content-box{
+    flex-direction: column-reverse;
+  }
+  
+}
+
+@media (max-width: 400.98px) { 
+  .h-main-text{
+    font-size: 45px;
+    line-height: .88em;
+  }
+}
